@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- SPDX-FileCopyrightText: © 2024 Matt Williams <matt@milliams.com>  -->
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+var founding = new Date("2019-03-13");
+var agm_2019 = new Date("2019-09-18");
+var agm_2020 = new Date("2020-09-07");
+var agm_2021 = new Date("2021-09-30");
+var agm_2022 = new Date("2022-09-07");
+var agm_2023 = new Date("2023-09-06");
+var agm_2024 = new Date("2023-09-04");
+var current = new Date();
+google.charts.load('current', {'packages':['timeline']});
+google.charts.setOnLoadCallback(drawTrusteeChart);
+function drawTrusteeChart() {
+    var palette = ["#a4b1cc", "#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395", "#994499", "#22aa99", "#aaaa11"];
+
+    var container = document.getElementById('trustee-timeline');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Name' });
+    dataTable.addColumn({ type: 'string', id: '...' });
+    dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+        ['Tania Allard', '', palette[0], founding, agm_2019],
+        ['Iain Bethune', '', palette[0], founding, agm_2019],
+        ['Alys Brett', '', palette[0], founding, agm_2019],
+        ['Mihaela Duta', '', palette[0], founding, agm_2019],
+        ['Simon Hettrick', '', palette[0], founding, agm_2019],
+        ['Robert Haines', '', palette[0], founding, agm_2019],
+        ['Matthew Johnson', '', palette[0], founding, agm_2019],
+        ['Ilian Todorov', '', palette[0], founding, agm_2019],
+        ['Andrew Turner', '', palette[0], founding, agm_2019],
+        ['Mark Turner (Newcastle)', '', palette[0], founding, agm_2019],
+        ['Christopher Woods', '', palette[0], founding, new Date("2019-05-01")],
+        ['Claire Wyatt', '', palette[0], founding, agm_2019],
+        
+        ['Tania Allard', '', palette[1], agm_2019, agm_2020],
+        ['Alys Brett', '', palette[1], agm_2019, agm_2020],
+        ['Mihaela Duta', '', palette[1], agm_2019, agm_2020],
+        ['Simon Hettrick', '', palette[1], agm_2019, agm_2020],
+        ['Andrew Turner', '', palette[1], agm_2019, agm_2020],
+        ['Claire Wyatt', '', palette[1], agm_2019, agm_2020],
+
+        ['Anna (Ania) Brown', '', palette[2], agm_2019, agm_2021],
+        ['Mozhgan Kabiri Chimeh', '', palette[2], agm_2019, agm_2021],
+        ['James Graham', '', palette[2], agm_2019, agm_2021],
+        ['Joanna Leng', '', palette[2], agm_2019, new Date("2021-07-08")],
+        ['Paul Richmond', '', palette[2], agm_2019, agm_2021],
+        ['Matt Williams', '', palette[2], agm_2019, agm_2021],
+        
+        ['Ian Cottam', '', palette[3], agm_2020, agm_2023],
+        ['Teri Forey', '', palette[3], agm_2020, agm_2022],
+        ['Fouzhan Hosseini', '', palette[3], agm_2020, agm_2021],
+        ['Kirsty Pringle', '', palette[3], agm_2020, agm_2022],
+        ['Marion Weinzierl', '', palette[3], agm_2020, agm_2022],
+        ['Claire Wyatt', '', palette[3], agm_2020, agm_2022],
+        
+        ['Fergus Cooper', '', palette[4], agm_2021, agm_2023],
+        ['Sam Mangham', '', palette[4], agm_2021, new Date("2023-11-03")],
+        ['Jamie Quinn', '', palette[4], agm_2021, agm_2023],
+        ['Holger Schulz', '', palette[4], agm_2021, new Date("2022-04-04")],
+        ['Malvika Sharan', '', palette[4], new Date("2022-03-14"), agm_2022],
+        ['Mark Turner (Durham)', '', palette[4], agm_2021, agm_2022],
+        ['Matt Williams', '', palette[4], agm_2021, current],
+        
+        ['Alex Coleman', '', palette[5], agm_2022, new Date("2023-06-30")],
+        ['David Beavan', '', palette[5], agm_2022, current],
+        ['Evelina Gabasova', '', palette[5], agm_2022, current],
+        ['Robin Nandi', '', palette[5], agm_2022, current],
+        ["Martin O'Reilly", '', palette[5], agm_2022, current],
+        ['Gillian Sinclair', '', palette[5], agm_2022, current],
+
+        ['Lyndsey Ballantyne', '', palette[6], agm_2023, current],
+        ['Mary Chester-Kadwell', '', palette[6], agm_2023, current],
+        ['Fliss Guest', '', palette[6], agm_2023, current],
+        ['Twin Karmakharm', '', palette[6], agm_2023, current],
+        ['Stef Piatek', '', palette[6], agm_2023, current],
+        ['Peter Schmidt', '', palette[6], agm_2023, current],
+        ['Mike Simpson', '', palette[6], agm_2023, current],
+        
+    ]);
+
+    var options = {
+        timeline: {
+            rowLabelStyle: { fontSize: 11 },
+            barLabelStyle: { fontSize: 6 }
+        },
+        height: 924,
+    }
+
+    chart.draw(dataTable,options);
+}
+google.charts.setOnLoadCallback(drawRoleChart);
+function drawRoleChart() {
+    var container = document.getElementById('role-timeline');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Role' });
+    dataTable.addColumn({ type: 'string', id: 'Name' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+        ['President', 'Alys Brett', founding, agm_2020],
+        ['President', 'Paul Richmond', agm_2020, agm_2021],
+        ['President', 'Matt Williams', agm_2021, current],
+        
+        ['Vice-President', 'Christopher Woods', founding, new Date("2019-05-01")],
+        ['Vice-President', 'Paul Richmond', agm_2019, agm_2020],
+        ['Vice-President', 'Claire Wyatt', agm_2020, agm_2021],
+        ['Vice-President', 'Teri Forey', agm_2021, new Date("2022-02-21")],
+        ['Vice-President', 'Ian Cottam', new Date("2022-02-21"), agm_2022],
+        ['Vice-President', 'David Beavan', agm_2022, current],
+        ['Vice-President', 'Evelina Gabasova', agm_2022, current],
+        
+        ['Treasurer', 'Simon Hettrick', founding, agm_2020],
+        ['Treasurer', 'Matt Williams', agm_2020, agm_2021],
+        ['Treasurer', 'Kirsty Pringle', agm_2021, agm_2022],
+        ['Treasurer', 'Fergus Cooper', agm_2022, agm_2023],
+        ['Treasurer', 'Robin Nandi', agm_2023, current],
+        
+        ['Vice-Treasurer', 'Matt Williams', agm_2019, agm_2020],
+        ['Vice-Treasurer', 'Kirsty Pringle', agm_2020, agm_2021],
+        ['Vice-Treasurer', 'Fergus Cooper', agm_2021, agm_2022],
+        ['Vice-Treasurer', 'Robin Nandi', agm_2022, agm_2023],
+        ['Vice-Treasurer', "Martin O'Reilly", agm_2023, current],
+        
+        ['Secretary', 'Andrew Turner', founding, agm_2020],
+        ['Secretary', 'Teri Forey', agm_2020, agm_2021],
+        ['Secretary', 'Mark Turner (Durham)', agm_2021, agm_2022],
+        ['Secretary', 'Gillian Sinclair', agm_2022, current],
+    ]);
+
+    var options = {
+        timeline: {
+            rowLabelStyle: { fontSize: 11 },
+            barLabelStyle: { fontSize: 11 }
+        },
+        height: 270,
+    }
+
+    chart.draw(dataTable, options);
+}
+
+window.onresize = function(){
+    drawTrusteeChart();
+    drawRoleChart();
+};
+</script>
+<div id="trustee-timeline"></div>
+<div id="role-timeline"></div>
+</body>
+</html>

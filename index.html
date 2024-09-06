@@ -11,7 +11,7 @@ var agm_2020 = new Date("2020-09-07");
 var agm_2021 = new Date("2021-09-30");
 var agm_2022 = new Date("2022-09-07");
 var agm_2023 = new Date("2023-09-06");
-var agm_2024 = new Date("2023-09-04");
+var agm_2024 = new Date("2024-09-04");
 var current = new Date();
 google.charts.load('current', {'packages':['timeline']});
 google.charts.setOnLoadCallback(drawTrusteeChart);
@@ -27,7 +27,7 @@ function drawTrusteeChart() {
     dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
-    dataTable.addRows([
+    trustees = [
         ['Tania Allard', '', palette[0], founding, agm_2019],
         ['Iain Bethune', '', palette[0], founding, agm_2019],
         ['Alys Brett', '', palette[0], founding, agm_2019],
@@ -85,15 +85,17 @@ function drawTrusteeChart() {
         ['Peter Schmidt', '', palette[6], agm_2023, current],
         ['Mike Simpson', '', palette[6], agm_2023, current],
         
-    ]);
+    ];
+    dataTable.addRows(trustees);
 
+    const num_people = new Set(trustees.map((t) => t[0])).size;
     var options = {
         timeline: {
             rowLabelStyle: { fontSize: 11 },
             barLabelStyle: { fontSize: 6 }
         },
-        height: 924,
-    }
+        height: num_people * 20.5 + 70,
+    };
 
     chart.draw(dataTable,options);
 }

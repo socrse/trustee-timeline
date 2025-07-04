@@ -12,11 +12,16 @@ var agm_2021 = new Date("2021-09-30");
 var agm_2022 = new Date("2022-09-07");
 var agm_2023 = new Date("2023-09-06");
 var agm_2024 = new Date("2024-09-04");
+var agm_2025 = new Date("2025-09-10");
 var current = new Date();
 google.charts.load('current', {'packages':['timeline']});
 google.charts.setOnLoadCallback(drawTrusteeChart);
 function drawTrusteeChart() {
-    var palette = ["#a4b1cc", "#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395", "#994499", "#22aa99", "#aaaa11"];
+    var palette = [
+        "#a4b1cc", "#3366cc", "#dc3912", "#ff9900", "#109618", 
+        "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", 
+        "#316395", "#994499", "#22aa99", "#aaaa11"
+    ];
 
     var container = document.getElementById('trustee-timeline');
     var chart = new google.visualization.Timeline(container);
@@ -87,9 +92,13 @@ function drawTrusteeChart() {
         
         ['Samantha Ahern', '', palette[7], agm_2024, current],
         ['Abie Alexander-Ikwue', '', palette[7], agm_2024, current],
-        ['Philip Grylls', '', palette[7], agm_2024, current],
+        ['Philip Grylls', '', palette[7], agm_2024, new Date("2025-06-05")],
         ['Godwin Yeboah', '', palette[7], agm_2024, current],
-        ['Yo Yehudi', '', palette[7], agm_2024, current],
+        ['Yo Yehudi', '', palette[7], agm_2024, new Date("2025-01-30")],
+
+        // temporarily appointed after other trustees stood down (2025)
+        ['Kirsty Pringle', '', palette[3], new Date("2025-06-20"), current],
+        ['Marion Weinzierl', '', palette[3], new Date("2025-05-23"), current],
     ];
     dataTable.addRows(trustees);
 
@@ -143,7 +152,7 @@ function drawRoleChart() {
         ['Vice-Treasurer', 'Robin Nandi', agm_2022, agm_2023],
         ['Vice-Treasurer', "Martin O'Reilly", agm_2023, agm_2024],
         ['Vice-Treasurer', 'Godwin Yeboah', agm_2024, current],
-        ['Vice-Treasurer', 'Yo Yehudi', agm_2024, current],
+        ['Vice-Treasurer', 'Yo Yehudi', agm_2024, new Date("2025-02-20")],
         
         ['Secretary', 'Andrew Turner', founding, agm_2020],
         ['Secretary', 'Teri Forey', agm_2020, agm_2021],

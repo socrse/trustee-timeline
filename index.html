@@ -83,22 +83,30 @@ function drawTrusteeChart() {
         ['Gillian Sinclair', '', palette[5], agm_2022, current],
 
         ['Lyndsey Ballantyne', '', palette[6], agm_2023, current],
-        ['Mary Chester-Kadwell', '', palette[6], agm_2023, current],
-        ['Fliss Guest', '', palette[6], agm_2023, current],
+        ['Mary Chester-Kadwell', '', palette[6], agm_2023, agm_2025],
+        ['Fliss Guest', '', palette[6], agm_2023, agm_2025],
         ['Twin Karmakharm', '', palette[6], agm_2023, current],
         ['Stef Piatek', '', palette[6], agm_2023, current],
         ['Peter Schmidt', '', palette[6], agm_2023, agm_2024],
         ['Mike Simpson', '', palette[6], agm_2023, current],
         
         ['Samantha Ahern', '', palette[7], agm_2024, current],
-        ['Abie Alexander-Ikwue', '', palette[7], agm_2024, current],
+        ['Abie Alexander-Ikwue', '', palette[7], agm_2024, agm_2025],
         ['Philip Grylls', '', palette[7], agm_2024, new Date("2025-06-05")],
-        ['Godwin Yeboah', '', palette[7], agm_2024, current],
+        ['Godwin Yeboah', '', palette[7], agm_2024, agm_2025],
         ['Yo Yehudi', '', palette[7], agm_2024, new Date("2025-01-30")],
 
-        // temporarily appointed after other trustees stood down (2025)
-        ['Kirsty Pringle', '', palette[7], new Date("2025-06-20"), current],
-        ['Marion Weinzierl', '', palette[7], new Date("2025-05-23"), current],
+        // Temporarily appointed after other trustees stood down (2025)
+        ['Kirsty Pringle', '', palette[3], new Date("2025-06-20"), agm_2025],
+        ['Marion Weinzierl', '', palette[3], new Date("2025-05-23"), agm_2025],
+
+        // 2025 New Trustees
+        ['Iain Barrass', '', palette[8], agm_2025, current],
+        ['William Haese-Hill', '', palette[8], agm_2025, current],
+        ['Elena Breitmoser', '', palette[8], agm_2025, current],
+        ['James Tyrrell', '', palette[8], agm_2025, current],
+        ['Mark Basham', '', palette[8], agm_2025, current],
+        ['Adrian Mircea Nenu', '', palette[8], agm_2025, current],
     ];
     dataTable.addRows(trustees);
 
@@ -137,7 +145,7 @@ function drawRoleChart() {
         ['Vice-President', 'David Beavan', agm_2022, agm_2024],
         ['Vice-President', 'Evelina Gabasova', agm_2022, agm_2024],
         ['Vice-President', 'Mike Simpson', agm_2024, current],
-        ['Vice-President', 'Fliss Guest', agm_2024, current],
+        ['Vice-President', 'Fliss Guest', agm_2024, agm_2025],
         
         ['Treasurer', 'Simon Hettrick', founding, agm_2020],
         ['Treasurer', 'Matt Williams', agm_2020, agm_2021],
@@ -151,16 +159,16 @@ function drawRoleChart() {
         ['Vice-Treasurer', 'Fergus Cooper', agm_2021, agm_2022],
         ['Vice-Treasurer', 'Robin Nandi', agm_2022, agm_2023],
         ['Vice-Treasurer', "Martin O'Reilly", agm_2023, agm_2024],
-        ['Vice-Treasurer', 'Godwin Yeboah', agm_2024, current],
+        ['Vice-Treasurer', 'Godwin Yeboah', agm_2024, agm_2025],
         ['Vice-Treasurer', 'Yo Yehudi', agm_2024, new Date("2025-02-20")],
         
         ['Secretary', 'Andrew Turner', founding, agm_2020],
         ['Secretary', 'Teri Forey', agm_2020, agm_2021],
         ['Secretary', 'Mark Turner (Durham)', agm_2021, agm_2022],
-        ['Secretary', 'Gillian Sinclair', agm_2022, current],
+        ['Secretary', 'Gillian Sinclair', agm_2022, agm_2025],
         
         ['Vice-Secretary', 'Fliss Guest', agm_2023, agm_2024],
-        ['Vice-Secretary', 'Stef Piatek', agm_2024, current],
+        ['Vice-Secretary', 'Stef Piatek', agm_2024, agm_2025],
     ]);
 
     var options = {

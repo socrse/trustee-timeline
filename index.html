@@ -13,6 +13,7 @@ var agm_2022 = new Date("2022-09-07");
 var agm_2023 = new Date("2023-09-06");
 var agm_2024 = new Date("2024-09-04");
 var agm_2025 = new Date("2025-09-10");
+var agm_2026 = new Date("2026-09-10");
 var current = new Date();
 google.charts.load('current', {'packages':['timeline']});
 google.charts.setOnLoadCallback(drawTrusteeChart);
@@ -82,13 +83,13 @@ function drawTrusteeChart() {
         ["Martin O'Reilly", '', palette[5], agm_2022, agm_2025],
         ['Gillian Sinclair', '', palette[5], agm_2022, agm_2025],
 
-        ['Lyndsey Ballantyne', '', palette[6], agm_2023, current],
+        ['Lyndsey Ballantyne', '', palette[6], agm_2023, agm_2026],
         ['Mary Chester-Kadwell', '', palette[6], agm_2023, agm_2025],
         ['Fliss Guest', '', palette[6], agm_2023, agm_2025],
-        ['Twin Karmakharm', '', palette[6], agm_2023, current],
-        ['Stef Piatek', '', palette[6], agm_2023, current],
+        ['Twin Karmakharm', '', palette[6], agm_2023, agm_2026],
+        ['Stef Piatek', '', palette[6], agm_2023, agm_2026],
         ['Peter Schmidt', '', palette[6], agm_2023, agm_2024],
-        ['Mike Simpson', '', palette[6], agm_2023, current],
+        ['Mike Simpson', '', palette[6], agm_2023, agm_2026],
         
         ['Samantha Ahern', '', palette[7], agm_2024, current],
         ['Abie Alexander-Ikwue', '', palette[7], agm_2024, agm_2025],
@@ -101,7 +102,7 @@ function drawTrusteeChart() {
         ['Marion Weinzierl', '', palette[7], new Date("2025-05-23"), agm_2025],
 
         // 2025 New Trustees
-        ['David Beavan', '', palette[8], agm_2025, current],
+        ['David Beavan', '', palette[8], agm_2025, agm_2026],
         ["Martin O'Reilly", '', palette[8], agm_2025, current],
         ['Gillian Sinclair', '', palette[8], agm_2025, current],
         ['Iain Barrass', '', palette[8], agm_2025, current],
@@ -110,6 +111,14 @@ function drawTrusteeChart() {
         ['James Tyrrell', '', palette[8], agm_2025, current],
         ['Mark Basham', '', palette[8], agm_2025, current],
         ['Adrian Mircea Nenu', '', palette[8], agm_2025, current],
+
+        // 2026 Trustees
+        ['Mike Simpson', '', palette[9], agm_2025, current],
+        ['Ryan Pepper', '', palette[9], agm_2025, current],
+        ['Christine Stawitz', '', palette[9], agm_2025, current],
+        ['Laura Crawford', '', palette[9], agm_2025, current],
+        ['Stephen Thompson', '', palette[9], agm_2025, current],
+        ['Isabel Fenton', '', palette[9], agm_2025, current],
     ];
     dataTable.addRows(trustees);
 
@@ -138,7 +147,8 @@ function drawRoleChart() {
         ['President', 'Alys Brett', founding, agm_2020],
         ['President', 'Paul Richmond', agm_2020, agm_2021],
         ['President', 'Matt Williams', agm_2021, agm_2024],
-        ['President', 'David Beavan', agm_2024, current],
+        ['President', 'David Beavan', agm_2024, agm_2026],
+        ['President', 'Mike Simpson', agm_2026, current],
         
         ['Vice-President', 'Christopher Woods', founding, new Date("2019-05-01")],
         ['Vice-President', 'Paul Richmond', agm_2019, agm_2020],
@@ -147,9 +157,10 @@ function drawRoleChart() {
         ['Vice-President', 'Ian Cottam', new Date("2022-02-21"), agm_2022],
         ['Vice-President', 'David Beavan', agm_2022, agm_2024],
         ['Vice-President', 'Evelina Gabasova', agm_2022, agm_2024],
-        ['Vice-President', 'Mike Simpson', agm_2024, current],
+        ['Vice-President', 'Mike Simpson', agm_2024, agm_2026],
         ['Vice-President', 'Fliss Guest', agm_2024, agm_2025],
         ['Vice-President', 'Samantha Ahern', agm_2025, current],
+        ['Vice-President', 'Laura Crawford', agm_2026, current],
         
         ['Treasurer', 'Simon Hettrick', founding, agm_2020],
         ['Treasurer', 'Matt Williams', agm_2020, agm_2021],
@@ -165,17 +176,20 @@ function drawRoleChart() {
         ['Vice-Treasurer', "Martin O'Reilly", agm_2023, agm_2024],
         ['Vice-Treasurer', 'Godwin Yeboah', agm_2024, agm_2025],
         ['Vice-Treasurer', 'Yo Yehudi', agm_2024, new Date("2025-02-20")],
-        ['Vice-Treasurer', 'James Tyrrell', agm_2025, current],
+        ['Vice-Treasurer', 'James Tyrrell', agm_2025, agm_2026],
+        ['Vice-Treasurer', 'Stephen Thompson', agm_2026, current],
         
         ['Secretary', 'Andrew Turner', founding, agm_2020],
         ['Secretary', 'Teri Forey', agm_2020, agm_2021],
         ['Secretary', 'Mark Turner (Durham)', agm_2021, agm_2022],
         ['Secretary', 'Gillian Sinclair', agm_2022, agm_2025],
-        ['Secretary', 'Stef Piatek', agm_2025, current],
+        ['Secretary', 'Stef Piatek', agm_2025, agm_2026],
+        ['Secretary', 'William Haese-Hill', agm_2026, current],
         
         ['Vice-Secretary', 'Fliss Guest', agm_2023, agm_2024],
         ['Vice-Secretary', 'Stef Piatek', agm_2024, agm_2025],
-        ['Vice-Secretary', 'William Haese-Hill', agm_2025, current],
+        ['Vice-Secretary', 'William Haese-Hill', agm_2025, agm_2026],
+        ['Vice-Secretary', 'Stephen Thompson', agm_2026, current],
     ]);
 
     var options = {
